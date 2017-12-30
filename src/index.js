@@ -37,6 +37,26 @@ export default {
                     return swal(config);
                 },
 
+                notify(type, options){
+                    let config = Object.assign({
+                        timer: 1500,
+                        position: 'top-end',
+                        showConfirmButton: false
+                    }, options);
+
+                    switch (type){
+                        case 'info':
+                            this.info(config);
+                            break;
+                        case 'error':
+                            this.error(config);
+                            break;
+                        default:
+                            this.success(config);
+                            break;
+                    }
+                },
+
                 confirm(callback, options) {
                     let config = Object.assign({
                         title: 'Sei sicuro?',

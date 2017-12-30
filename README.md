@@ -35,3 +35,15 @@ If you need to use a raw swal instance:
 ```javascript
 this.$alerts.swal();
 ```
+
+
+## Use as notification
+Main alerts types `success, info, error` can be used as notification:
+```javascript
+this.$alerts.notify('info', {title: 'More info!'});
+```
+
+Notification is success by default:
+```javascript
+this.$alerts.notify();
+```
