@@ -46,14 +46,11 @@ export default {
 
                     switch (type){
                         case 'info':
-                            this.info(config);
-                            break;
+                            return this.info(config);
                         case 'error':
-                            this.error(config);
-                            break;
+                            return this.error(config);
                         default:
-                            this.success(config);
-                            break;
+                            return this.success(config);
                     }
                 },
 

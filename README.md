@@ -47,3 +47,18 @@ Notification is success by default:
 ```javascript
 this.$alerts.notify();
 ```
+
+
+## Promise
+All plugin element return swal promise to control post execution:
+```javascript
+// Alerts
+this.$alerts.success().then(() => {
+    console.log('Post alert execution');
+});
+
+// Notification
+this.$alerts.notify().then(() => {
+    console.log('Post notification execution');
+});
+```
