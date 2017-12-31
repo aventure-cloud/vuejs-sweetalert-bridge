@@ -62,3 +62,14 @@ this.$alerts.notify().then(() => {
     console.log('Post notification execution');
 });
 ```
+
+
+## Input form
+```javascript
+this.$alerts.confirm((v) => {
+    console.log(v);
+}, {
+    input: 'textarea',
+    inputPlaceholder: 'Type your message here'
+});
+```
