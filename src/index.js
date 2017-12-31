@@ -62,11 +62,11 @@ export default {
                         showCancelButton: true
                     }, options);
 
-                    swal(config).then((confirm) => {
-                        if (confirm.value)
-                            return callback();
+                    swal(config).then((res) => {
+                        if (res.value)
+                            return callback(res);
                         else
-                            console.log("Action cancelled");
+                            console.log("Action cancelled", res);
                     });
                 }
             }
