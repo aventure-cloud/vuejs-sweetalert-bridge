@@ -63,7 +63,7 @@ export default {
                     }, options);
 
                     swal(config).then((res) => {
-                        if (res.value)
+                        if (res.hasOwnProperty('value'))
                             return callback(res);
                         else
                             console.log("Action cancelled", res);
