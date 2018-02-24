@@ -1,6 +1,6 @@
 {
   "name": "@aventure-cloud/vuejs-sweetalert-bridge",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Vuejs plugin to use sweetalert js lib in a smart way",
   "main": "lib/index.js",
   "scripts": {

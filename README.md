@@ -7,12 +7,12 @@ Vuejs plugin to use sweetalert js lib in a smart way.
 
 
 ## Install
-`npm install vuejs-sweetalert-bridge --save`
+`npm install @aventure-cloud/vuejs-sweetalert-bridge --save`
 
 
-## Integrate
+## Import in your project
 ```javascript
-import AlertsPlugin from 'vuejs-sweetalert-bridge';
+import AlertsPlugin from '@aventure-cloud/vuejs-sweetalert-bridge';
 Vue.use(AlertsPlugin);
 ```
 
