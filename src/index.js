@@ -1,7 +1,16 @@
 import swal from 'sweetalert2';
+import lang from './languages';
 
 export default {
-    install: function (Vue) {
+    install: function (Vue, options) {
+
+        let config = Object.assign({
+            lang: 'it'
+        }, options);
+
+        let trans = (type, key) => {
+            return lang[config.lang][type][key];
+        };
 
         Object.defineProperty(Vue.prototype, '$alerts', {
             value: {
@@ -9,8 +18,8 @@ export default {
 
                 success(options) {
                     let config = Object.assign({
-                        title: 'Ottimo lavoro',
-                        text: 'Tutte le informazioni sonon state salvate correttamente.',
+                        title: trans('success', 'title'),
+                        text: trans('success', 'message'),
                         type: 'success'
                     }, options);
 
@@ -19,8 +28,8 @@ export default {
 
                 info(options) {
                     let config = Object.assign({
-                        title: 'Info',
-                        text: null,
+                        title: trans('info', 'title'),
+                        text: trans('info', 'message'),
                         type: 'info'
                     }, options);
 
@@ -29,8 +38,8 @@ export default {
 
                 error(options) {
                     let config = Object.assign({
-                        title: 'Oops!',
-                        text: 'Il server potrebbe aver riscontrato un errore prima di eseguire l\'operazione richiesta.',
+                        title: trans('error', 'title'),
+                        text: trans('error', 'message'),
                         type: 'error'
                     }, options);
 
@@ -56,8 +65,8 @@ export default {
 
                 confirm(callback, options) {
                     let config = Object.assign({
-                        title: 'Sei sicuro?',
-                        text: '"OK" per confermare, "Cancel" per annullare.',
+                        title: trans('confirm', 'title'),
+                        text: trans('confirm', 'message'),
                         type: "question",
                         showCancelButton: true
                     }, options);
