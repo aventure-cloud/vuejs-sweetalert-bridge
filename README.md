@@ -2,8 +2,8 @@
 Vuejs plugin to use sweetalert js lib in a smart way.
 
 
-- **Author:** Valerio Barbera - [valerio@aventuresrl.com](mailto:valerio@aventuresrl.com)
-- **Author Website:** [www.aventuresrl.com](target="_blank":https://www.aventuresrl.com)
+- **Author:** Valerio Barbera - [support@gistmetrics.com](mailto:support@gistmetrics.com)
+- **Author Website:** [www.gistmetrics.com](target="_blank":https://www.gistmetrics.com) 
 
 
 ## Install
